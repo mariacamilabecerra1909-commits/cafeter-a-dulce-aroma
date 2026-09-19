@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dulce Aroma | Cafetería</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- LOGIN -->
+
+    <div id="loginPantalla" class="login-pantalla">
+
+        <div class="login-caja">
+
+            <img
+                src="imagenes/logo.png"
+                alt="Logo Dulce Aroma"
+                class="logo-login"
+            >
+
+            <h1>Dulce Aroma</h1>
+
+            <p class="login-subtitulo">
+                Un momento dulce en cada taza.
+            </p>
+
+            <form id="loginForm">
+
+                <label for="correo">
+                    Correo electrónico
+                </label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    placeholder="Ingresa tu correo"
+                    required
+                >
+
+                <label for="contrasena">
+                    Contraseña
+                </label>
+
+                <input
+                    type="password"
+                    id="contrasena"
+                    placeholder="Ingresa tu contraseña"
+                    required
+                >
+
+                <button type="submit" class="boton-login">
+                    Entrar
+                </button>
+
+                <p id="mensaje" class="mensaje"></p>
+
+            </form>
+
+            <p class="login-pie">
+                Bienvenido a Dulce Aroma
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- PÁGINA PRINCIPAL -->
+
+    <div id="pagina">
+
+        <!-- ENCABEZADO -->
+
+        <header>
+
+            <div class="logo">
+
+                <img
+                    src="imagenes/logo.png"
+                    alt="Dulce Aroma Cafetería"
+                >
+
+            </div>
+
+            <nav>
+
+                <a href="#inicio">Inicio</a>
+
+                <a href="#nosotros">Nosotros</a>
+
+                <a href="#menu">Menú</a>
+
+                <a href="#galeria">Galería</a>
+
+                <a href="#contacto">Contacto</a>
+
+                <button
+                    class="boton-carrito"
+                    onclick="abrirCarrito()"
+                >
+                    Carrito
+                    <span id="contadorCarrito">0</span>
+                </button>
+
+            </nav>
+
+        </header>
+
+
+        <!-- INICIO -->
+
+        <section id="inicio" class="inicio">
+
+            <div class="inicio-texto">
+
+                <p class="pequeno">
+                    BIENVENIDOS A
+                </p>
+
+                <h1>
+                    Dulce Aroma
+                </h1>
+
+                <h2>
+                    Un momento dulce en cada taza.
+                </h2>
+
+                <p>
+                    Disfruta de nuestros cafés, bebidas y deliciosos
+                    productos preparados especialmente para ti.
+                </p>
+
+                <a href="#menu" class="boton">
+                    Ver nuestro menú
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- NOSOTROS -->
+
+        <section id="nosotros" class="seccion">
+
+            <h2>
+                Sobre nosotros
+            </h2>
+
+            <p class="descripcion">
+
+                En <strong>Dulce Aroma</strong> somos una cafetería
+                creada para compartir buenos momentos.
+
+                Ofrecemos bebidas calientes, desayunos y productos
+                deliciosos en un ambiente cómodo y agradable.
+
+            </p>
+
+            <div class="tarjetas">
+
+                <div class="tarjeta">
+
+                    <div class="tarjeta-icono">
+                        Calidad
+                    </div>
+
+                    <h3>
+                        Calidad
+                    </h3>
+
+                    <p>
+                        Preparamos nuestros productos con dedicación
+                        y buenos ingredientes.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="tarjeta-icono">
+                        Atención
+                    </div>
+
+                    <h3>
+                        Amabilidad
+                    </h3>
+
+                    <p>
+                        Queremos que cada cliente se sienta cómodo
+                        y bien recibido.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="tarjeta-icono">
+                        Experiencia
+                    </div>
+
+                    <h3>
+                        Experiencia
+                    </h3>
+
+                    <p>
+                        Buscamos crear momentos especiales en cada visita.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MENÚ -->
+
+        <section id="menu" class="seccion menu">
+
+            <h2>
+                Nuestro menú
+            </h2>
+
+            <p class="descripcion">
+                Elige tus productos favoritos y agrégalos a tu carrito.
+            </p>
+
+
+            <div class="productos">
+
+
+                <!-- TINTO -->
+
+                <div class="producto">
+
+                    <div class="producto-imagen">
+
+                        <img
+                            src="imagenes/TINTO.jpg"
+                            alt="Tinto tradicional"
+                        >
+
+                    </div>
+
+                    <h3>
+                        Tinto tradicional
+                    </h3>
+
+                    <p>
+                        Tinto caliente preparado con un delicioso aroma.
+                    </p>
+
+                    <strong>
+                        $4.000
+                    </strong>
+
+                    <button
+                        class="boton-producto"
+                        onclick="agregarAlCarrito('Tinto tradicional', 4000)"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </div>
+
+
+                <!-- HUEVOS -->
+
+                <div class="producto">
+
+                    <div class="producto-imagen">
+
+                        <img
+                            src="imagenes/huevos.jpg"
+                            alt="Huevos Fritos"
+                        >
+
+                    </div>
+
+                    <h3>
+                        Huevos Fritos
+                    </h3>
+
+                    <p>
+                        Huevos fritos con una yema suave y deliciosa.
+                    </p>
+
+                    <strong>
+                        $7.000
+                    </strong>
+
+                    <button
+                        class="boton-producto"
+                        onclick="agregarAlCarrito('Huevos Fritos', 7000)"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </div>
+
+
+                <!-- CHOCOLATE -->
+
+                <div class="producto">
+
+                    <div class="producto-imagen">
+
+                        <img
+                            src="imagenes/chocolates.jpg"
+                            alt="Chocolate con Pan hojaldrado"
+                        >
+
+                    </div>
+
+                    <h3>
+                        Chocolate con Pan hojaldrado
+                    </h3>
+
+                    <p>
+                        Una combinación deliciosa para comenzar el día.
+                    </p>
+
+                    <strong>
+                        $5.000
+                    </strong>
+
+                    <button
+                        class="boton-producto"
+                        onclick="agregarAlCarrito(
+                            'Chocolate con Pan hojaldrado',
+                            5000
+                        )"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </div>
+
+
+                <!-- CALDO -->
+
+                <div class="producto">
+
+                    <div class="producto-imagen">
+
+                        <img
+                            src="imagenes/caldo.jpg"
+                            alt="Caldo de costilla"
+                        >
+
+                    </div>
+
+                    <h3>
+                        Caldo de costilla
+                    </h3>
+
+                    <p>
+                        Caliente y delicioso para empezar de buena manera tu día.
+                    </p>
+
+                    <strong>
+                        $10.000
+                    </strong>
+
+                    <button
+                        class="boton-producto"
+                        onclick="agregarAlCarrito('Caldo de costilla', 10000)"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALERÍA -->
+
+        <section id="galeria" class="seccion">
+
+            <h2>
+                Galería
+            </h2>
+
+            <p class="descripcion">
+                Un vistazo a la experiencia Dulce Aroma.
+            </p>
+
+            <div class="galeria">
+
+                <div class="galeria-item">
+
+                    <img
+                        src="imagenes/TINTO.jpg"
+                        alt="Tinto tradicional"
+                    >
+
+                    <span>
+                        Tinto
+                    </span>
+
+                </div>
+
+
+                <div class="galeria-item">
+
+                    <img
+                        src="imagenes/huevos.jpg"
+                        alt="Huevos Fritos"
+                    >
+
+                    <span>
+                        Huevos
+                    </span>
+
+                </div>
+
+
+                <div class="galeria-item">
+
+                    <img
+                        src="imagenes/chocolates.jpg"
+                        alt="Chocolate con Pan"
+                    >
+
+                    <span>
+                        Chocolate con Pan
+                    </span>
+
+                </div>
+
+
+                <div class="galeria-item">
+
+                    <img
+                        src="imagenes/caldo.jpg"
+                        alt="Caldo de costilla"
+                    >
+
+                    <span>
+                        Caldos
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACTO -->
+
+        <section id="contacto" class="contacto">
+
+            <h2>
+                Contáctanos
+            </h2>
+
+            <p class="contacto-descripcion">
+                Estamos aquí para atenderte y compartir contigo
+                un momento especial.
+            </p>
+
+
+            <div class="contacto-contenedor">
+
+
+                <div class="contacto-card">
+
+                    <div class="contacto-icono">
+                        Dirección
+                    </div>
+
+                    <h3>
+                        Dirección
+                    </h3>
+
+                    <p>
+                        Cra 13b 23b 18<br>
+                        Mosquera, Cundinamarca
+                    </p>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Cra+13b+23b+18+Mosquera+Cundinamarca"
+                        target="_blank"
+                        class="boton-contacto"
+                    >
+                        Ver ubicación
+                    </a>
+
+                </div>
+
+
+                <div class="contacto-card">
+
+                    <div class="contacto-icono">
+                        Teléfono
+                    </div>
+
+                    <h3>
+                        Teléfono
+                    </h3>
+
+                    <p>
+                        319 580 8875
+                    </p>
+
+                    <a
+                        href="tel:+573195808875"
+                        class="boton-contacto"
+                    >
+                        Llamar
+                    </a>
+
+                </div>
+
+
+                <div class="contacto-card">
+
+                    <div class="contacto-icono">
+                        Correo
+                    </div>
+
+                    <h3>
+                        Correo
+                    </h3>
+
+                    <p>
+                        dulcearoma@gmail.com
+                    </p>
+
+                    <a
+                        href="mailto:dulcearoma@gmail.com"
+                        class="boton-contacto"
+                    >
+                        Escribir
+                    </a>
+
+                </div>
+
+
+                <div class="contacto-card">
+
+                    <div class="contacto-icono">
+                        Horario
+                    </div>
+
+                    <h3>
+                        Horario
+                    </h3>
+
+                    <p>
+                        Lunes a sábado<br>
+                        8:00 a.m. - 5:00 p.m.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- REDES -->
+
+            <div class="redes">
+
+                <h3>
+                    Síguenos y contáctanos
+                </h3>
+
+                <div class="redes-contenedor">
+
+                    <a
+                        href="https://wa.me/573195808875"
+                        target="_blank"
+                        class="red"
+                    >
+                        WhatsApp
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/dulcearoma1909/"
+                        target="_blank"
+                        class="red"
+                    >
+                        Instagram
+                    </a>
+
+                    <a
+                        href="https://www.tiktok.com/@dulcearoma1909"
+                        target="_blank"
+                        class="red"
+                    >
+                        TikTok
+                    </a>
+
+                    <a
+                        href="https://www.facebook.com/share/19AzKJ7vEt/"
+                        target="_blank"
+                        class="red"
+                    >
+                        Facebook
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORMAS DE PAGO -->
+
+            <div class="pagos">
+
+                <h3>
+                    Formas de pago
+                </h3>
+
+                <div class="pagos-contenedor">
+
+                    <div class="pago-card">
+                        Nequi
+                    </div>
+
+                    <div class="pago-card">
+                        Efectivo
+                    </div>
+
+                    <div class="pago-card">
+                        Tarjeta
+                    </div>
+
+                </div>
+
+                <div class="datos-nequi">
+
+                    <h4>
+                        Pago por Nequi
+                    </h4>
+
+                    <p>
+                        Número: <strong>319 580 8875</strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                © 2026 Dulce Aroma - Todos los derechos reservados.
+            </p>
+
+            <p class="footer-extra">
+                Hecho con dedicación.
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- CARRITO -->
+
+    <div
+        id="carrito"
+        class="carrito"
+    >
+
+        <div class="carrito-caja">
+
+            <div class="carrito-header">
+
+                <h2>
+                    Tu carrito
+                </h2>
+
+                <button
+                    class="cerrar-carrito"
+                    onclick="cerrarCarrito()"
+                >
+                    X
+                </button>
+
+            </div>
+
+
+            <div
+                id="listaCarrito"
+                class="lista-carrito"
+            >
+            </div>
+
+
+            <!-- MÉTODO DE PAGO -->
+
+            <div class="metodo-pago">
+
+                <h3>
+                    Método de pago
+                </h3>
+
+                <label
+                    for="metodoPago"
+                    class="label-pago"
+                >
+                    Selecciona cómo deseas pagar
+                </label>
+
+                <select
+                    id="metodoPago"
+                    onchange="mostrarDatosPago()"
+                >
+
+                    <option value="">
+                        Selecciona un método
+                    </option>
+
+                    <option value="Nequi">
+                        Nequi
+                    </option>
+
+                    <option value="Efectivo">
+                        Efectivo
+                    </option>
+
+                    <option value="Tarjeta">
+                        Tarjeta
+                    </option>
+
+                </select>
+
+
+                <div
+                    id="datosPago"
+                    class="datos-pago"
+                >
+                </div>
+
+            </div>
+
+
+            <div class="carrito-footer">
+
+                <div class="total-carrito">
+
+                    <span>
+                        Total:
+                    </span>
+
+                    <strong id="totalCarrito">
+                        $0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="boton-vaciar"
+                    onclick="vaciarCarrito()"
+                >
+                    Vaciar carrito
+                </button>
+
+
+                <button
+                    class="boton-whatsapp"
+                    onclick="enviarPedidoWhatsApp()"
+                >
+                    Pedir por WhatsApp
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
